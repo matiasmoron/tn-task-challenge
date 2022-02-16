@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/variables';
+
+.task {
+  &__block {
+    font-size: 1.3rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0.1rem 0.2rem 5px 0 transparentize(darken($primary, 40%), 0.8);
+
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.task-row {
+  &__block {
+    text-align: left;
+  }
+}

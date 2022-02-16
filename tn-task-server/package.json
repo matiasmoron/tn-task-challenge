@@ -1,0 +1,31 @@
+{
+  "name": "tn-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "debug": "nodemon src/index.js --exec  babel-node --inspect",
+    "build": "babel src --out-dir build",
+    "start": "node build/index.js",
+    "lint": "eslint --fix ."
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "core-js": "^3.19.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "eslint": "^8.4.1",
+    "firebase-admin": "^10.0.2",
+    "nodemon": "^2.0.15"
+  }
+}

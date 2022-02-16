@@ -1,0 +1,30 @@
+@import '../../styles/abstracts/mixins';
+
+.tasks-list {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  font-size: 1.7rem;
+
+  @include respond('big-desktop') {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  @include respond('tab-land') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond('tab-port') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond('phone') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.no-data {
+  opacity: 0.5;
+}
